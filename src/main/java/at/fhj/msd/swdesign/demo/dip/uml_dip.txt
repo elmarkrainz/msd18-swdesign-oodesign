@@ -1,0 +1,39 @@
+@startuml
+
+/'DIP'/
+
+skinparam classAttributeIconSize 0
+
+/' '/
+class Button{
+ - sensor :Sensor
+  +press()
+}
+
+class Sensor{
++turnOn()
++turnOff()
+ }
+
+
+Sensor<--Button
+
+
+
+/'
+
+class Button{
+ - switchable: Switchable
+  + press()
+}
+
+interface Switchabel{
++turnOn()
++turnOff()
+ }
+
+Switchabel<-Button
+Switchabel<|..Sensor
+
+'/
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+
+/'LSP'/
+
+skinparam classAttributeIconSize 0
+
+class Rectangle{
+ # width : int
+ # heigth : int
++ setWitdth(w : int)
++ setHeigth(h : int)
+
++calculateArea(): int
+
+ }
+
+Rectangle<|--Square
+
+
+
+/'
+
+interface Shape{
+   +calculateArea(): int
+ }
+
+
+
+Shape<|.. Square
+Shape<|.. Rectangle
+'/
+
+@enduml

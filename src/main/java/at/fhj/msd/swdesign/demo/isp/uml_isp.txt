@@ -1,0 +1,38 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+interface UserOps{
+ + saveUserData()
+
++chckUserAccess(): boolean
+
+    + anotherUserOperation()
+
+ }
+
+UserOps<|.. User
+
+/' ISP  ---- '/
+
+
+
+interface UserOpsAccess{
+    +chckUserAccess(): boolean
+ }
+
+interface UserOpsPersistance{
+ + saveUserData()
+ }
+
+
+interface UserOpsAnother{
+    + anotherUserOperation()
+}
+
+UserOpsAccess<|.. NewUser
+UserOpsPersistance<|.. NewUser
+
+UserOpsAnother<|.. AnotherUser
+
+@enduml

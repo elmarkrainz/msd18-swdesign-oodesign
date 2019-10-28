@@ -1,0 +1,33 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class User{
+}
+
+class UserService{
+
++ checkAccess(): boolean
+
++ changeUserDate()
+}
+
+User <- UserService
+
+
+/'
+class UserAccessService{
+
++ checkAccess(): boolean
+
+}
+class UserSettingService{
+
++ changeUserDate()
+
+}
+
+User <-- UserAccessService
+User <-- UserSettingService
+'/
+@enduml
