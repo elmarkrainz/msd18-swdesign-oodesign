@@ -17,16 +17,31 @@ public class LSP_Main {
         System.out.println(square.calculateArea());
 
 
-        // PROBLEM - violation of LSF
+        // PROBLEM - violation of LSP
 
         Rectangle someRectangle = square;
         someRectangle.setWidth(4);
         someRectangle.setHeigth(6);
+
         System.out.print("Some rectangle 4x6, area:");
         System.out.println(someRectangle.calculateArea());
 
 
         // Solution - interface
+
+        LSPRectangle newRectangle = new LSPRectangle();
+        newRectangle.setHeigth(4);
+        newRectangle.setWidth(6);
+
+        LSPSquare newSquare = new LSPSquare();
+        newSquare.setSize(4);
+
+        Shape lspShape = newRectangle;
+        System.out.println("LSP rectangle: " + lspShape.calculateArea());
+
+        lspShape = newSquare;
+        System.out.println("LSP square: " + lspShape.calculateArea());
+
 
     }
 }

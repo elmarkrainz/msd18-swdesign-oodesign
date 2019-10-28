@@ -1,9 +1,9 @@
 package at.fhj.msd.swdesign.demo.lsp;
 
-public class Rectangle {
+public class LSPRectangle implements Shape {
 
-    protected int width;
-    protected int heigth;
+    private int width;
+    private int heigth;
 
 
     public void setHeigth(int heigth) {
@@ -14,9 +14,8 @@ public class Rectangle {
         this.width = width;
     }
 
+
     public int calculateArea() {
-        return heigth * width;
+        return width * heigth;
     }
-
-
 }
