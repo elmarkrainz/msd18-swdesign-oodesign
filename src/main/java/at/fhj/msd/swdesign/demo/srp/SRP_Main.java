@@ -13,6 +13,16 @@ public class SRP_Main {
         // status User
         System.out.println(user);
 
+        UserAccessService.checkAccess(user);
+        System.out.println(user);
+
+
+        UserSettingService userSettingService = new UserSettingService();
+        userSettingService.changeUserData(user, "Toni", true);
+        System.out.println(user);
+
+
+
 
     }
 }
