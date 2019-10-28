@@ -26,6 +26,9 @@ public class Logger {
         this.logType = logType;
     }
 
+
+
+
     public void log(String logMessage) {
 
         switch (logType) {

@@ -14,6 +14,10 @@ public class OCP_Main
 
 
         // New Logger with abstract base-class
+        AbstractLogger newLogger = new ConsoleLogger();
+        newLogger.log("log Something 1");
+        newLogger.log("log Something 2");
+        newLogger.log("log Something 3");
 
 
     }
