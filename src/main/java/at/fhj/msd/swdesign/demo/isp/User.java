@@ -18,6 +18,8 @@ public class User implements IUserOps {
     }
 
 
+
+
     // 3 different operations from one interface
 
     public void saveUserData() {
@@ -26,15 +28,12 @@ public class User implements IUserOps {
 
 
     public boolean checkUserAccess() {
-
         System.out.println("check access");
-
         return false;
     }
 
 
     public void anotherUserOperation() {
-        System.out.println("another op");
 
 
     }

@@ -14,6 +14,13 @@ public class DIP_Main {
 
         // DIP
 
+        DIPButton dipButton = new DIPButton(new DIPSensor());
+
+        dipButton.press();
+        dipButton.press();
+        dipButton.press();
+        dipButton.press();
+
 
 
     }

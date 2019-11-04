@@ -15,6 +15,10 @@ public class ISP_Main {
 
         // ISP
 
+        IUserAnother userAnother;
+        userAnother = new UserAnother();
+        userAnother.anotherUserOperation();
+
 
     }
 }

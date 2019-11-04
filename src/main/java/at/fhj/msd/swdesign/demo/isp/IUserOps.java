@@ -17,9 +17,4 @@ public interface IUserOps {
     void anotherUserOperation();
 
 
-
-
-
-
-
 }
